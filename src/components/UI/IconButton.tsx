@@ -15,6 +15,9 @@ const styles = {
     svg {
       fill: var(--primary500);
     }
+    &:hover {
+      filter: brightness(85%);
+    }
   `,
 };
 

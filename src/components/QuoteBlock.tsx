@@ -32,6 +32,7 @@ const styles = {
   `,
   title: css`
     width: 100%;
+    margin-top: 20px;
     font-size: 18px;
     font-family: "Courier Prime", monospace;
     font-weight: 400;
