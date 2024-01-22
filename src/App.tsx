@@ -36,6 +36,11 @@ const styles = {
     list-style: decimal;
     list-style-position: inside;
     line-height: 1.8;
+    code {
+      padding: 2px 4px;
+      background-color: var(--primary100);
+      border-radius: 4px;
+    }
   `,
   selectors: css`
     margin: 32px 0;
@@ -84,7 +89,7 @@ const styles = {
 };
 
 function App() {
-  const [copied, setCopied] = useState<boolean | null>(null);
+  const [copiedUrl, setCopiedUrl] = useState<boolean | null>(null);
   const [currentTheme, setCurrentTheme] = useState<Theme>(themes[0]);
   const [currentSize, setCurrentSize] = useState<TextSize>(sizes[0]);
 
@@ -98,12 +103,12 @@ function App() {
     setCurrentSize(current[0]);
   }, []);
 
-  const handleCopy = () => {
+  const handleCopyURL = () => {
     copy(
       `https://movie-quote-of-the-day.chocolat5.com/quote?theme=${currentTheme.id}&fontSize=${currentSize.id}`
     );
-    setCopied(true);
-    setTimeout(() => setCopied(null), 1500);
+    setCopiedUrl(true);
+    setTimeout(() => setCopiedUrl(null), 1500);
   };
 
   return (
@@ -114,7 +119,7 @@ function App() {
           <p>
             Minimal Movie Quotes Widget for Notion workspace.
             <br />
-            Show a random quotes from all time best movies every time you open
+            Show a random quotes from all-time best movies every time you open
             Notion.
           </p>
           <h2 css={styles.headline}>How to Use</h2>
@@ -123,7 +128,9 @@ function App() {
             <li>
               Click the “Copy URL” button to copy the URL to your clipboard.
             </li>
-            <li>Type /embed in Notion to create a new embed block.</li>
+            <li>
+              Type <code>/embed</code> in Notion to create a new embed block.
+            </li>
             <li>Paste the URL from your clipboard.</li>
           </ol>
         </div>
@@ -137,21 +144,23 @@ function App() {
         <div css={styles.selectors}>
           <div>
             <h2 css={styles.selectType}>Theme:</h2>
-            {themes.map((theme, i) => (
-              <Fragment key={theme.id}>
-                <SelectButton
-                  id={theme.id}
-                  selected={currentTheme.id === theme.id}
-                  text={theme.label}
-                  variant={
-                    (i === 0 && "left") ||
-                    (i === themes.length - 1 && "right") ||
-                    "middle"
-                  }
-                  handleClick={() => handleThemeChange(theme.id)}
-                />
-              </Fragment>
-            ))}
+            <div css={styles.selectorsTheme}>
+              {themes.map((theme, i) => (
+                <Fragment key={theme.id}>
+                  <SelectButton
+                    id={theme.id}
+                    selected={currentTheme.id === theme.id}
+                    text={theme.label}
+                    variant={
+                      (i === 0 && "left") ||
+                      (i === themes.length - 1 && "right") ||
+                      "middle"
+                    }
+                    handleClick={() => handleThemeChange(theme.id)}
+                  />
+                </Fragment>
+              ))}
+            </div>
           </div>
           <div>
             <h2 css={styles.selectType}>Size:</h2>
@@ -174,9 +183,9 @@ function App() {
         </div>
         <div css={styles.button}>
           <Button
-            copied={copied}
-            text={copied ? "Copied" : "Copy URL"}
-            handleClick={handleCopy}
+            copied={copiedUrl}
+            text={copiedUrl ? "Copied" : "Copy URL"}
+            handleClick={handleCopyURL}
           />
         </div>
       </main>
