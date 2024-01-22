@@ -11,8 +11,6 @@ import SelectButton from "@/src/components/UI/SelectButton";
 import { Theme, TextSize } from "@/src/types";
 import themes from "@/src/utils/themes";
 import sizes from "@/src/utils/sizes";
-// eslint-disable-next-line import/extensions
-import quotes from "@/src/data/quotes.json";
 
 const styles = {
   main: css`
@@ -134,13 +132,7 @@ function App() {
             <li>Paste the URL from your clipboard.</li>
           </ol>
         </div>
-        <QuoteBlock
-          quote={quotes[0].quote}
-          title={quotes[0].title}
-          year={quotes[0].year}
-          size={currentSize}
-          theme={currentTheme}
-        />
+        <QuoteBlock size={currentSize} theme={currentTheme} />
         <div css={styles.selectors}>
           <div>
             <h2 css={styles.selectType}>Theme:</h2>

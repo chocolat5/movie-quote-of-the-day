@@ -55,23 +55,20 @@ const styles = {
   `,
 };
 
-type Props = Omit<Quote, "size"> & {
+type Props = {
   theme: Theme;
 } & {
   size: TextSize;
 };
 
-export default function QuoteBlock({
-  quote,
-  title,
-  year,
-  size,
-  theme,
-}: Props): ReactElement {
+export default function QuoteBlock({ size, theme }: Props): ReactElement {
   const [copiedQuote, setCopiedQuote] = useState<boolean | null>(null);
+  const [currentQuote, setCurrentQuote] = useState<Omit<Quote, "size">>(
+    getRandomQuote(quotes)
+  );
 
   const handleCopyQuote = () => {
-    copy(`${quotes[0].quote} - ${quotes[0].title}(${quotes[0].year})`);
+    copy(`${currentQuote.quote} - ${currentQuote.title}(${currentQuote.year})`);
     setCopiedQuote(true);
     setTimeout(() => setCopiedQuote(null), 1500);
   };
@@ -79,8 +76,9 @@ export default function QuoteBlock({
   const actions = (
     <div css={styles.actions}>
       <IconButton
+        id="refresh"
         ariaLabel="refresh"
-        handleClick={() => getRandomQuote(quotes)}
+        handleClick={() => setCurrentQuote(getRandomQuote(quotes))}
       >
         <svg
           width="24"
@@ -95,7 +93,11 @@ export default function QuoteBlock({
           />
         </svg>
       </IconButton>
-      <IconButton ariaLabel="Tweet" handleClick={() => undefined}>
+      <IconButton
+        id="tweet"
+        ariaLabel="Tweet"
+        text={`${currentQuote.quote}%20-%20${currentQuote.title}(${currentQuote.year})`}
+      >
         <svg
           width="24"
           height="24"
@@ -109,7 +111,11 @@ export default function QuoteBlock({
           />
         </svg>
       </IconButton>
-      <IconButton ariaLabel="Copy to Clipboard" handleClick={handleCopyQuote}>
+      <IconButton
+        id="copy"
+        ariaLabel="Copy to Clipboard"
+        handleClick={handleCopyQuote}
+      >
         <svg
           width="24"
           height="24"
@@ -136,10 +142,10 @@ export default function QuoteBlock({
       }}
     >
       <p css={styles.quote} style={{ fontSize: `${size.fontSize}px` }}>
-        {quote}
+        {currentQuote.quote}
       </p>
       <p css={styles.title}>
-        - {title} ({year})
+        - {currentQuote.title} ({currentQuote.year})
       </p>
       {actions}
     </div>
