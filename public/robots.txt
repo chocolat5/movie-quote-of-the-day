@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chocolat5.com/sitemap.xml
+Sitemap: https://movie-quote-of-the-day.chocolat5.com/sitemap.xml
