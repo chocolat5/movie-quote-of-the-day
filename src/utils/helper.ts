@@ -1,6 +1,9 @@
-import { BreakPoints, breakpoints } from "@/src/config/variables";
+import { Quote } from "@/src/types";
 
-// eslint-disable-next-line import/prefer-default-export, arrow-body-style
-export const mq = (key: BreakPoints) => {
-  return `@media (min-width: ${breakpoints[key]}px)`;
+const getRandomQuote = (arr: Omit<Quote, "size">[]) => {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  const item = arr[randomIndex];
+  return item;
 };
+
+export default getRandomQuote;
