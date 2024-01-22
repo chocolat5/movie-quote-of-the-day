@@ -4,8 +4,11 @@ const styles = {
   header: css`
     max-width: var(--main);
     margin: 0 auto;
-    padding: 96px 0 0;
+    padding: 48px 0 0;
     text-align: center;
+    @media screen and (min-width: 600px) {
+      padding-top: 96px;
+    }
   `,
   title: css`
     font-size: 20px;

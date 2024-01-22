@@ -8,10 +8,13 @@ const styles = {
     place-items: center;
     width: 100%;
     min-height: 240px;
-    padding: 40px;
+    padding: 24px;
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 2px;
+    @media screen and (min-width: 600px) {
+      padding: 40px;
+    }
   `,
   quote: css`
     font-size: 24px;

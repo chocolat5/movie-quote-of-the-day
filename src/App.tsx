@@ -18,6 +18,10 @@ const styles = {
   main: css`
     max-width: var(--main);
     margin: 0 auto;
+    padding: 0 24px;
+    @media screen and (min-width: 900px) {
+      padding: 0;
+    }
   `,
   headline: css`
     margin: 24px 0 8px;
@@ -34,9 +38,38 @@ const styles = {
     line-height: 1.8;
   `,
   selectors: css`
-    display: flex;
-    gap: 24px;
     margin: 32px 0;
+    @media screen and (min-width: 900px) {
+      display: flex;
+      gap: 24px;
+    }
+  `,
+  selectorsTheme: css`
+    @media screen and (max-width: 599px) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      button {
+        &:nth-child(n + 4) {
+          border-top: none;
+        }
+        &:nth-of-type(3) {
+          border-radius: 0 8px 0 0;
+        }
+        &:nth-of-type(4) {
+          border-left: 1px solid var(--border);
+        }
+        &:nth-of-type(6) {
+          border-radius: 0 0 8px 0;
+        }
+        &.-variant-left {
+          border-radius: 8px 0 0 0;
+        }
+        &.-variant-right {
+          border-radius: 0 0 8px 8px;
+          border-left: 1px solid var(--border);
+        }
+      }
+    }
   `,
   selectType: css`
     margin-bottom: 8px;

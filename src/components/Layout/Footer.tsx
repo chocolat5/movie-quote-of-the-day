@@ -4,9 +4,12 @@ const styles = {
   footer: css`
     max-width: var(--main);
     margin: 0 auto;
-    padding: 24px 0 96px;
+    padding: 24px 0 48px;
     font-size: 12px;
     text-align: center;
+    @media screen and (min-width: 600px) {
+      padding-bottom: 96px;
+    }
   `,
   link: css`
     color: var(--primary);
