@@ -15,8 +15,10 @@
     "@emotion/react": "^11.11.1",
     "copy-to-clipboard": "^3.3.3",
     "modern-normalize": "^2.0.0",
+    "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "url": "^0.11.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
