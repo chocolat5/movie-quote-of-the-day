@@ -40,6 +40,15 @@ const styles = {
       border-radius: 4px;
     }
   `,
+  quote: css`
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 240px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  `,
   selectors: css`
     margin: 32px 0;
     @media screen and (min-width: 900px) {
@@ -132,7 +141,9 @@ function App() {
             <li>Paste the URL from your clipboard.</li>
           </ol>
         </div>
-        <QuoteBlock size={currentSize} theme={currentTheme} />
+        <div css={styles.quote}>
+          <QuoteBlock size={currentSize} theme={currentTheme} />
+        </div>
         <div css={styles.selectors}>
           <div>
             <h2 css={styles.selectType}>Theme:</h2>

@@ -2,25 +2,26 @@ import { ReactElement, useState } from "react";
 import { css } from "@emotion/react";
 import copy from "copy-to-clipboard";
 
-import IconButton from "@/src/components/UI/IconButton";
-import { Quote, Theme, TextSize } from "@/src/types";
-import getRandomQuote from "@/src/utils/helper";
+import IconButton from "./UI/IconButton";
+import { Quote, Theme, TextSize } from "../types";
+import getRandomQuote from "../utils/helper";
 // eslint-disable-next-line import/extensions
-import quotes from "@/src/data/quotes.json";
+import quotes from "../data/quotes.json";
 
 const styles = {
   wrap: css`
+    width: 100%;
     display: grid;
     place-items: center;
-    width: 100%;
-    min-height: 240px;
+    height: 100%;
     padding: 24px;
-    background-color: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 2px;
     @media screen and (min-width: 600px) {
       padding: 40px;
     }
+  `,
+  container: css`
+    width: var(--main);
+    margin: 0 auto;
   `,
   quote: css`
     font-size: 24px;
@@ -142,13 +143,15 @@ export default function QuoteBlock({ size, theme }: Props): ReactElement {
         backgroundColor: theme.bgColor,
       }}
     >
-      <p css={styles.quote} style={{ fontSize: `${size.fontSize}px` }}>
-        {currentQuote.quote}
-      </p>
-      <p css={styles.title}>
-        - {currentQuote.title} ({currentQuote.year})
-      </p>
-      {actions}
+      <div css={styles.container}>
+        <p css={styles.quote} style={{ fontSize: `${size.fontSize}px` }}>
+          {currentQuote.quote}
+        </p>
+        <p css={styles.title}>
+          - {currentQuote.title} ({currentQuote.year})
+        </p>
+        {actions}
+      </div>
     </div>
   );
 }
