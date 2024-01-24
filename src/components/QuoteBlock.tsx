@@ -20,8 +20,10 @@ const styles = {
     }
   `,
   container: css`
-    width: var(--main);
     margin: 0 auto;
+    @media screen and (min-width: 900px) {
+      width: calc(var(--main) - 80px);
+    }
   `,
   quote: css`
     font-size: 24px;
