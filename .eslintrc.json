@@ -35,8 +35,8 @@
     "@typescript-eslint/triple-slash-reference": "off",
     "import/extensions": [
       "error",
-      "always",
       {
+        "ignorePackages": true,
         "ts": "never",
         "tsx": "never",
         "js": "never",
