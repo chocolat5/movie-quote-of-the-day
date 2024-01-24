@@ -48,6 +48,7 @@ const styles = {
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 2px;
+    overflow: hidden;
   `,
   selectors: css`
     margin: 32px 0;
