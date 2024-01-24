@@ -1,13 +1,14 @@
 # The Movie Quote of the Day
 
 Minimal Movie Quotes Widget for Notion workspace.  
-Show a random quotes from all-time best movies every time you open Notion.  
+Show a random inspirational quotes from movies every time you open Notion.  
 👉 [https://movie-quote-of-the-day.chocolat5.com/](https://movie-quote-of-the-day.chocolat5.com/)
 
 - Light & Dark theme
 - 5 Color Theme
 - 3 Font sizes
-- Perfect for embedding on Notion
+- One click to copy and it's perfect for embedding on Notion
+- Hand-picked quotes from the greatest movies (mostly 2000s) include Studio Ghibli
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![GitHub Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4)](https://github.com/sponsors/myConsciousness) <img src="https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-orange.svg?style=flat" alt="Deployed on Cloudflare Pages">
 
