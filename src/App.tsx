@@ -113,7 +113,7 @@ function App() {
 
   const handleCopyURL = () => {
     copy(
-      `https://movie-quote-of-the-day.chocolat5.com/quote?theme=${currentTheme.id}&fontSize=${currentSize.id}`
+      `https://movie-quote-of-the-day.chocolat5.com/quote/?theme=${currentTheme.id}&fontSize=${currentSize.id}`
     );
     setCopiedUrl(true);
     setTimeout(() => setCopiedUrl(null), 1500);
