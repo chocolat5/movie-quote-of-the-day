@@ -10,7 +10,7 @@ Show a random inspirational quotes from movies every time you open Notion.
 - One click to copy and it's perfect for embedding on Notion
 - Hand-picked quotes from the greatest movies (mostly 2000s) include Studio Ghibli
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![GitHub Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4)](https://github.com/sponsors/myConsciousness) <img src="https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-orange.svg?style=flat" alt="Deployed on Cloudflare Pages">
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <img src="https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-orange.svg?style=flat" alt="Deployed on Cloudflare Pages">
 
 ## 💻 Tech Stack
 
