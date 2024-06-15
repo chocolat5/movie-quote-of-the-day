@@ -52,14 +52,6 @@ npm install
 npm run dev
 ```
 
-## 💛 Support
-
-The simplest way to show us your support is by giving the project a star at GitHub 🌟  
-And I'm always appreciate to the bug report and your feedbacks.  
-Also you can support me as a [Sponsor](https://github.com/sponsors/chocolat5) 🫶
-
-Thank you for your support 💛
-
 ## 📜 License
 
 Licensed under the GPL-3.0
