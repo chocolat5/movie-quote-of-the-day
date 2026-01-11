@@ -52,12 +52,6 @@ npm install
 npm run dev
 ```
 
-## Support
-I'm always appreciate to the bug report or your feedbacks.  
-If you want to support me, please see [here](https://ko-fi.com/chocolat5).
-
-Thank you for your support 💚
-
 ## 📜 License
 
 Licensed under the GPL-3.0
