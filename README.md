@@ -1,7 +1,10 @@
 # The Movie Quote of the Day
 
+<img src="./public/assets/images/thumb.png" width="640" alt="The Movie Quote of the Day" />
+
 Minimal Movie Quotes Widget for Notion workspace.  
 Show a random inspirational quotes from movies every time you open Notion.  
+
 👉 [https://movie-quote-of-the-day.chocolat5.com/](https://movie-quote-of-the-day.chocolat5.com/)
 
 - Light & Dark theme
